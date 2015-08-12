@@ -25,10 +25,17 @@ typedef struct {
 	double speed;
 } TFPBacklashValues;
 
+typedef struct {
+    double bl;
+    double br;
+    double fl;
+    double fr;
+} TFPMysterySValues;
+
 
 extern NSString *TFPBedLevelOffsetsDescription(TFPBedLevelOffsets offsets);
 extern NSString *TFPBacklashValuesDescription(TFPBacklashValues values);
-
+extern NSString *TFPMysterySValuesDescription(TFPMysterySValues values);
 
 @interface TFPPrintParameters : NSObject
 @property (readwrite) BOOL verbose;
@@ -39,6 +46,7 @@ extern NSString *TFPBacklashValuesDescription(TFPBacklashValues values);
 
 @property (readwrite) TFPBedLevelOffsets bedLevelOffsets;
 @property (readwrite) TFPBacklashValues backlashValues;
+@property (readwrite) TFPMysterySValues mysterySValues;
 
 @property (readwrite) BOOL useWaveBonding;
 @property (readwrite) BOOL useBacklashCompensation;

@@ -58,6 +58,28 @@
 	}];
 }
 
+- (void)fetchMysterySValuesWithCompletionHandler:(void(^)(BOOL success, TFPMysterySValues values))completionHandler {
+    NSArray *indexes = @[@(VirtualEEPROMIndexBedCompensationBackLeft),
+                         @(VirtualEEPROMIndexBedCompensationBackRight),
+                         @(VirtualEEPROMIndexBedCompensationFrontLeft),
+                         @(VirtualEEPROMIndexBedCompensationFrontRight)
+                         ];
+
+    [self readVirtualEEPROMFloatValuesAtIndexes:indexes completionHandler:^(BOOL success, NSArray *values) {
+        TFPMysterySValues mystery = {0};
+        if(success) {
+            mystery.bl = [values[0] floatValue];
+            mystery.br = [values[1] floatValue];
+            mystery.fl = [values[2] floatValue];
+            mystery.fr = [values[3] floatValue];
+
+            completionHandler(YES, mystery);
+        }else{
+            completionHandler(NO, mystery);
+        }
+    }];
+}
+
 
 - (void)fetchBacklashValuesWithCompletionHandler:(void(^)(BOOL success, TFPBacklashValues values))completionHandler {
 	NSArray *indexes = @[@(VirtualEEPROMIndexBacklashCompensationX),
@@ -115,22 +137,29 @@
 
 
 - (void)fillInOffsetAndBacklashValuesInPrintParameters:(TFPPrintParameters*)params completionHandler:(void(^)(BOOL success))completionHandler {
-	[self fetchBedOffsetsWithCompletionHandler:^(BOOL success, TFPBedLevelOffsets offsets) {
-		if(!success) {
-			completionHandler(NO);
-			return;
-		}
-		
-		params.bedLevelOffsets = offsets;
-		[self fetchBacklashValuesWithCompletionHandler:^(BOOL success, TFPBacklashValues values) {
-			if(!success) {
-				completionHandler(NO);
-				return;
-			}
-			params.backlashValues = values;
-			completionHandler(YES);
-		}];
-	}];
+    [self fetchBedOffsetsWithCompletionHandler:^(BOOL success, TFPBedLevelOffsets offsets) {
+        if(!success) {
+            completionHandler(NO);
+            return;
+        }
+
+        params.bedLevelOffsets = offsets;
+        [self fetchBacklashValuesWithCompletionHandler:^(BOOL success, TFPBacklashValues values) {
+            if(!success) {
+                completionHandler(NO);
+                return;
+            }
+            params.backlashValues = values;
+            [self fetchMysterySValuesWithCompletionHandler:^(BOOL success, TFPMysterySValues values) {
+                if(!success) {
+                    completionHandler(NO);
+                    return;
+                }
+                params.mysterySValues = values;
+                completionHandler(YES);
+            }];
+        }];
+    }];
 }
 
 

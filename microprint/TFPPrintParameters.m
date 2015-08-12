@@ -53,3 +53,9 @@ NSString *TFPBacklashValuesDescription(TFPBacklashValues values) {
 			values.speed
 			];
 }
+
+NSString *TFPMysterySValuesDescription(TFPMysterySValues values) {
+    return [NSString stringWithFormat:@"{ BR: %.03f, BL: %.03f, FL: %.03f, FR: %.03f }",
+            values.br, values.bl, values.fl, values.fr
+            ];
+}

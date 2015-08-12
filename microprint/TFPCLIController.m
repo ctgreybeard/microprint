@@ -320,6 +320,7 @@
 		[self.printer fillInOffsetAndBacklashValuesInPrintParameters:params completionHandler:^(BOOL success) {
 			TFLog(@"Bed level: %@", TFPBedLevelOffsetsDescription(params.bedLevelOffsets));
 			TFLog(@"Backlash values: %@", TFPBacklashValuesDescription(params.backlashValues));
+            TFLog(@"Mystery values: %@", TFPMysterySValuesDescription(params.mysterySValues));
 			exit(EXIT_SUCCESS);
 		}];
 		
