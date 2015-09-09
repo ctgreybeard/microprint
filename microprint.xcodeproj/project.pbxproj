@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0F0A2A3E1B6EC19D00628ED7 /* TFPZeroBedOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F974CC81B6995FC00376C8B /* TFPZeroBedOperation.m */; };
+		0F13923C1B9F05CD005D5D22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F13923B1B9F05CD005D5D22 /* main.swift */; };
+		0F1392411B9F23C4005D5D22 /* TFPExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E59B761B316F0D00343D58 /* TFPExtras.m */; settings = {ASSET_TAGS = (); }; };
+		0F1392431B9F2774005D5D22 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F1392421B9F2774005D5D22 /* libz.tbd */; };
 		0F1AF3B11B6DB17300E92E24 /* TFPZeroHeadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AF3B01B6DB17300E92E24 /* TFPZeroHeadViewController.m */; };
 		0F974CCA1B6995FC00376C8B /* TFPZeroBedOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F974CC81B6995FC00376C8B /* TFPZeroBedOperation.m */; };
 		0FF4B2341B6E6BCE006EE30B /* TFPCalibrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF4B2331B6E6BCE006EE30B /* TFPCalibrationViewController.m */; };
@@ -107,6 +110,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0F1392371B9F05CD005D5D22 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		C9CEF7D71B7E406C00D7A750 /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,6 +142,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F1392391B9F05CD005D5D22 /* showprofile */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = showprofile; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F13923B1B9F05CD005D5D22 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0F1392421B9F2774005D5D22 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		0F1392441B9F2A02005D5D22 /* showprofile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "showprofile-Bridging-Header.h"; sourceTree = "<group>"; };
 		0F1AF3AF1B6DB17300E92E24 /* TFPZeroHeadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPZeroHeadViewController.h; sourceTree = "<group>"; };
 		0F1AF3B01B6DB17300E92E24 /* TFPZeroHeadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFPZeroHeadViewController.m; sourceTree = "<group>"; };
 		0F974CC71B6995FC00376C8B /* TFPZeroBedOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPZeroBedOperation.h; sourceTree = "<group>"; };
@@ -256,6 +272,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0F1392361B9F05CD005D5D22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F1392431B9F2774005D5D22 /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C95F10991B53E3E200F396B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,6 +300,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F13923A1B9F05CD005D5D22 /* showprofile */ = {
+			isa = PBXGroup;
+			children = (
+				0F13923B1B9F05CD005D5D22 /* main.swift */,
+			);
+			path = showprofile;
+			sourceTree = "<group>";
+		};
 		C94469AD1B78189B008820F4 /* Printing */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +422,7 @@
 				C9E59B8F1B31838000343D58 /* TFP3DVector.m */,
 				C9E59B751B316F0D00343D58 /* TFPExtras.h */,
 				C9E59B761B316F0D00343D58 /* TFPExtras.m */,
+				0F1392441B9F2A02005D5D22 /* showprofile-Bridging-Header.h */,
 				C94469AE1B79382F008820F4 /* TFPStopwatch.h */,
 				C94469AF1B79382F008820F4 /* TFPStopwatch.m */,
 				C9901DCB1B9475CE00724F1A /* TFPApplicationDebug.h */,
@@ -464,6 +497,7 @@
 		C9E59B5F1B316AF400343D58 = {
 			isa = PBXGroup;
 			children = (
+				0F1392421B9F2774005D5D22 /* libz.tbd */,
 				C96590DB1B3DAAFE009D028F /* Printer */,
 				C9C871A31B56A1130063FACB /* Print Job */,
 				C96590DD1B3DAB30009D028F /* Operations */,
@@ -472,6 +506,7 @@
 				C9FD1C5A1B39601900F98FF1 /* External */,
 				C9E59B6A1B316AF400343D58 /* microprint CLI */,
 				C95F109D1B53E3E200F396B6 /* MicroPrint UI */,
+				0F13923A1B9F05CD005D5D22 /* showprofile */,
 				C9E59B691B316AF400343D58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -481,6 +516,7 @@
 			children = (
 				C9E59B681B316AF400343D58 /* microprint */,
 				C95F109C1B53E3E200F396B6 /* MicroPrint.app */,
+				0F1392391B9F05CD005D5D22 /* showprofile */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -536,6 +572,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0F1392381B9F05CD005D5D22 /* showprofile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F13923D1B9F05CD005D5D22 /* Build configuration list for PBXNativeTarget "showprofile" */;
+			buildPhases = (
+				0F1392351B9F05CD005D5D22 /* Sources */,
+				0F1392361B9F05CD005D5D22 /* Frameworks */,
+				0F1392371B9F05CD005D5D22 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = showprofile;
+			productName = showprofile;
+			productReference = 0F1392391B9F05CD005D5D22 /* showprofile */;
+			productType = "com.apple.product-type.tool";
+		};
 		C95F109B1B53E3E200F396B6 /* MicroPrint UI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C95F10BD1B53E3E300F396B6 /* Build configuration list for PBXNativeTarget "MicroPrint UI" */;
@@ -580,9 +633,12 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Tomas Franzén";
 				TargetAttributes = {
+					0F1392381B9F05CD005D5D22 = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					C95F109B1B53E3E200F396B6 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 4R2KAE48H2;
+						DevelopmentTeam = 3CL8WYF3VH;
 					};
 					C9E59B671B316AF400343D58 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -604,6 +660,7 @@
 			targets = (
 				C9E59B671B316AF400343D58 /* microprint */,
 				C95F109B1B53E3E200F396B6 /* MicroPrint UI */,
+				0F1392381B9F05CD005D5D22 /* showprofile */,
 			);
 		};
 /* End PBXProject section */
@@ -622,6 +679,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0F1392351B9F05CD005D5D22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F13923C1B9F05CD005D5D22 /* main.swift in Sources */,
+				0F1392411B9F23C4005D5D22 /* TFPExtras.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C95F10981B53E3E200F396B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -740,6 +806,23 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0F13923E1B9F05CD005D5D22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "microprint/showprofile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0F13923F1B9F05CD005D5D22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "microprint/showprofile-Bridging-Header.h";
+			};
+			name = Release;
+		};
 		C95F10B91B53E3E300F396B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -879,6 +962,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0F13923D1B9F05CD005D5D22 /* Build configuration list for PBXNativeTarget "showprofile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F13923E1B9F05CD005D5D22 /* Debug */,
+				0F13923F1B9F05CD005D5D22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C95F10BD1B53E3E300F396B6 /* Build configuration list for PBXNativeTarget "MicroPrint UI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
